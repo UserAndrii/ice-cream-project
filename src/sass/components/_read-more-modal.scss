@@ -1,3 +1,7 @@
+.read-more-modal-open {
+  overflow-y: hidden;
+}
+
 .read-more-container.is-hidden {
     visibility: hidden;
     opacity: 0;
@@ -16,7 +20,7 @@
 
     min-width: 280px;
     min-height: 459px;
-
+    
     padding: 28px;
 
     transform: translate(-50%, -50%) scale(1);
