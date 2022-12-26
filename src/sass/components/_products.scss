@@ -3,6 +3,38 @@
 
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: cover;
+
+  background-image: url(../images/backgroud_mobile@1x.jpg);
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/backgroud_mobile@2x.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/background_tablet@1x.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/background_tablet@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(../images/backgroud_desktop@1x.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/backgroud_desktop@2x.jpg);
+    }
+  }
 }
 
 .products__pre-title {
@@ -121,6 +153,27 @@
 .first {
   background-color: getColor('bg-primary');
 }
+
+.first::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+
+  background-image: url(../images/products/mobile_tablet/icecream_mobile_tablet@1x.jpg),
+    linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)),
+    #d9d9d9;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+}
+
 .second {
   background-color: #efd478;
 }
