@@ -63,10 +63,7 @@
     justify-content: end;
     
     @extend %list;
-    @media screen and(min-width:768px) {
-        display: flex;
-        margin-top: 61px;
-        margin-right: -32px;
+    @media screen and(min-width:768px){
         margin-bottom: 34px;
     }
 
@@ -83,18 +80,23 @@
 
 &__link{
     @media screen and (min-width:768px) {
-        flex-basis: calc((100% / 4) - 13px);
+        &:not(:last-child){
+            margin-right: 30px;
+        }    
     }
-     
-        @media screen and (min-width:1200px) {
-            flex-basis: calc((100% / 6) - 20px);
-            margin-right: 20px;
-   
-        }
     
 &--item{
+    fill: getColor("bg-primary");
     width: 34px;
     height: 34px;
+
+    transition: $transition-timing $timing-function;
+
+    &:hover,
+    &:focus{
+        fill: getColor("white-text");
+    }
+    
 }
     }
 }
