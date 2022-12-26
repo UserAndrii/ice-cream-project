@@ -1,0 +1,27 @@
+$primary-font: 'Montserrat', sans-serif;
+$title-font: 'Seymour One', sans-serif;
+
+$transition-timing: 250ms;
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+// MAP_GET_COLORS
+$colors: (
+  'bg-primary': #84a278,
+  'white-text': #fcfcfc,
+  'black-text': #131313,
+  'button-text': #000000,
+  'focus-btn-text': #ffffff,
+  'address-text': #d6936d,
+  'time-text': #ababab,
+  'hover-accent': #f8d24e,
+  'hover-second': #0a8817,
+);
+
+@function getColor($key) {
+  @return map-get($colors, $key);
+}
+
+// Приклад для запису:
+// .title {
+//   color: getColor("white-text");
+// }

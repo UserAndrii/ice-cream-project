@@ -1,0 +1,273 @@
+
+// Button "Products"
+
+.btn-group__btn-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 11px 26px;
+      
+    background-color: transparent;
+    color: getColor('button-text');
+      
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.25;
+    cursor: pointer;
+
+    border: 2px solid getColor('hover-accent');
+    border-radius: 8px;
+      
+    @media screen and (min-width:1200px) {
+        padding: 12px 34px;
+        font-size: 14px;
+        line-height: 1.29;
+        border-radius: 10px;
+    }  
+
+    transition: background-color $transition-timing $timing-function,
+        color $transition-timing $timing-function;
+
+    &:hover {
+        border-color: getColor('hover-second');
+    }
+      
+    &:focus {
+        @media screen and (min-width:1200px) {
+        color: getColor('white-text');
+        border-color: getColor('hover-second');
+        }
+    }
+
+    &:disabled {
+        @media screen and (min-width:1200px) {
+        color: getColor('button-text');
+        border-color: getColor('time-text');
+        }
+    }
+}
+
+//  Button "Read more"
+
+.btn-group__btn-readmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 35px;
+    // padding: 12px 35px 12px 34px;
+  
+    background-color: getColor('hover-accent');
+    color: getColor('button-text');
+    fill: getColor('button-text');
+  
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+    cursor: pointer;
+  
+    border: none;
+    border-radius: 10px;
+  
+    transition: background-color $transition-timing $timing-function,
+        color $transition-timing $timing-function,
+        fill $transition-timing $timing-function;
+  
+    &:hover {
+        background-color: getColor('hover-second');
+        color: getColor('button-text');
+        fill: getColor('button-text');
+    }
+  
+    &:focus {
+        background-color: getColor('hover-second');
+        color: getColor('white-text');
+        fill: getColor('white-text');
+    }
+
+    &:disabled {
+        background-color: getColor('time-text');
+        color: getColor('button-text');
+        fill: getColor('button-text');    
+    }
+}
+
+// Відступ іконки від текста
+
+.btn-group__icon {
+    margin-left: 4px;
+}
+
+
+// Button "How it’s made?"
+
+.btn-group__btn-made {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration-line: underline;
+      
+    background-color: transparent;
+    color: getColor('hovert-accent');
+      
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.25;
+    cursor: pointer;
+      
+    @media screen and (min-width:1200px) {
+        font-size: 14px;
+        line-height: 1.21;
+    }  
+
+    transition: background-color $transition-timing $timing-function,
+        color $transition-timing $timing-function;
+
+    &:hover {
+        color: getColor('hover-second');
+    }
+      
+    &:focus {
+        color: getColor('white-text');
+    }
+
+    &:disabled {
+        color: getColor('time-text');
+    }
+}
+  
+//  Button "Our locations"  
+
+.btn-group__btn-locations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 40px;
+    // padding: 12px 39px 12px 40px;
+  
+    background-color: getColor('hover-accent');
+    color: getColor('black-text');
+    fill: getColor('black-text');
+  
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+    cursor: pointer;
+  
+    border: none;
+    border-radius: 10px;
+  
+    transition: background-color $transition-timing $timing-function,
+        color $transition-timing $timing-function,
+        fill $transition-timing $timing-function;
+  
+    &:hover {
+        background-color: getColor('hover-second');
+        color: getColor('button-text');
+        fill: getColor('button-text');
+    }
+  
+    &:focus {
+        background-color: getColor('hover-second');
+        color: getColor('focus-btn-text');
+        fill: getColor('focus-btn-text');
+    }
+
+    &:disabled {
+        background-color: getColor('time-text');
+        color: getColor('black-text');
+        fill: getColor('black-text');    
+    }
+}
+  
+// Button "Franchise"
+
+.btn-group__btn-franchise {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 55px;
+    // padding: 10px 54px 10px 55px;
+  
+    background-color: transparent;
+    color: getColor('button-text');
+    fill: getColor('button-text');
+  
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+    cursor: pointer;
+  
+    border: 2px solid getColor('hover-accent');
+    border-radius: 10px;
+  
+    transition: border-color $transition-timing $timing-function,
+        color $transition-timing $timing-function,
+        fill $transition-timing $timing-function;
+  
+    &:hover,
+    &:focus {
+        border-color: getColor('hover-second');
+    }
+  
+    &:focus {
+        color: getColor('focus-btn-text');
+        fill: getColor('focus-btn-text');
+    }
+
+    &:disabled {
+        color: getColor('button-text');
+        border-color: getColor('time-text');
+    }
+}
+ 
+// Button "Buy now"
+
+.btn-group__btn-buynow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding: 12px 35px 12px 34px;
+    padding: 12px 35px;
+  
+    background-color: getColor('hover-accent');
+    color: getColor('button-text');
+    fill: getColor('button-text');
+  
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.21;
+    cursor: pointer;
+  
+    border: none;
+    border-radius: 10px;
+  
+    transition: background-color $transition-timing $timing-function,
+        color $transition-timing $timing-function,
+        fill $transition-timing $timing-function;
+  
+    &:hover {
+        background-color: getColor('hover-second');
+        color: getColor('button-text');
+        fill: getColor('button-text');
+    }
+  
+    &:focus {
+        background-color: getColor('hover-second');
+        color: getColor('focus-btn-text');
+        fill: getColor('focus-btn-text');
+    }
+
+    &:disabled {
+        background-color: getColor('time-text');
+        color: getColor('button-text');
+        fill: getColor('button-text');    
+    }
+}

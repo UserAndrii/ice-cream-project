@@ -1,0 +1,338 @@
+.contacts {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.contacts__list {
+  @extend %list;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-left: -16px;
+    margin-top: -16px;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: -32px;
+    margin-top: -32px;
+    margin-bottom: 60px;
+  }
+}
+
+.contacts__item {
+  background-color: getColor('white-text');
+  padding: 40px 32px 24px;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% / 3) - 16px);
+    margin-left: 16px;
+    margin-top: 16px;
+    padding: 40px 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% / 3) - 32px);
+    margin-left: 32px;
+    margin-top: 32px;
+    padding: 40px 40px;
+  }
+}
+
+.contacts__category {
+  display: inline-block;
+  background: getColor('hover-accent');
+  color: getColor('black-text');
+  padding: 4px 22px;
+  border-radius: 4px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 4px 13px;
+    margin-bottom: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+}
+
+.contacts__city {
+  color: getColor('black-text');
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+
+  margin-bottom: 8px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+.contacts__address {
+  display: inline-block;
+  color: getColor('address-text');
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.83;
+  letter-spacing: 0.04em;
+
+  text-decoration: none;
+  transition: text-decoration $transition-timing $timing-function;
+  margin-bottom: 48px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 64px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.schedule {
+  position: relative;
+  @extend %list;
+  margin-bottom: 48px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 64px;
+  }
+}
+
+.schedule__item {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: -24px;
+
+    display: block;
+    content: ' ';
+    width: 100%;
+    border-bottom: 1px solid #e1e1e1;
+
+    @media screen and (min-width: 768px) {
+      top: -32px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -24px;
+
+    display: block;
+    content: ' ';
+    width: 100%;
+    border-bottom: 1px solid #e1e1e1;
+
+    @media screen and (min-width: 768px) {
+      bottom: -32px;
+    }
+  }
+}
+
+.schedule__day {
+  color: getColor('black-text');
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+.schedule__time {
+  color: getColor('time-text');
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+.communication {
+  @extend %list;
+}
+
+.communication__item:not(:last-child) {
+  margin-bottom: 6px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 4px;
+  }
+}
+
+.communication__link {
+  color: getColor('black-text');
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: color $transition-timing $timing-function;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+  }
+
+  &:hover {
+    color: getColor('hover-second');
+  }
+
+  &:focus {
+    color: getColor('hover-accent');
+  }
+}
+
+.btn-group {
+  @extend %list;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.btn-group__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 16px;
+  }
+}
+
+.btn-group__btn-locations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 40px;
+
+  background-color: getColor('hover-accent');
+  color: getColor('black-text');
+  fill: getColor('black-text');
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 10px;
+
+  transition: background-color $transition-timing $timing-function,
+    color $transition-timing $timing-function,
+    fill $transition-timing $timing-function;
+
+  &:hover {
+    background-color: getColor('hover-second');
+    color: getColor('button-text');
+    fill: getColor('button-text');
+  }
+
+  &:focus {
+    background-color: getColor('hover-second');
+    color: getColor('focus-btn-text');
+    fill: getColor('focus-btn-text');
+  }
+}
+
+.btn-group__icon {
+  margin-left: 4px;
+}
+
+.btn-group__btn-franchise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 53px;
+
+  background-color: transparent;
+  color: getColor('button-text');
+  fill: getColor('button-text');
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  cursor: pointer;
+
+  border: 2px solid getColor('hover-accent');
+  border-radius: 10px;
+
+  transition: border-color $transition-timing $timing-function,
+    color $transition-timing $timing-function,
+    fill $transition-timing $timing-function;
+
+  &:hover,
+  &:focus {
+    border-color: getColor('hover-second');
+  }
+
+  &:focus {
+    color: getColor('focus-btn-text');
+    fill: getColor('focus-btn-text');
+  }
+}

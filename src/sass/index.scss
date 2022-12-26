@@ -1,2 +1,6 @@
-@import './common';
-@import './example';
+@import './utils/variables';
+@import './utils/placeholder';
+@import './utils/base';
+@import './utils/buttons';
+
+@import './components/contacts';
