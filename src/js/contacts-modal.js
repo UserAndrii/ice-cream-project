@@ -85,3 +85,15 @@ document.addEventListener('DOMContentLoaded', function () {
   //   this.classList.remove('active');
   // });
 }); // end ready
+
+(() => {
+  document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+    e.preventDefault();
+
+    new FormData(e.currentTarget).forEach((value, name) =>
+      console.log(`${name}: ${value}`)
+    );
+
+    e.currentTarget.reset();
+  });
+})();

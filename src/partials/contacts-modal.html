@@ -53,50 +53,69 @@
       </h2>
     </div>
 
-    <p class="franchise-window__text">
-      Due to the overwhelming volume of franchise requests we are not accepting
-      new franchisee applications at this time. Once the application process
-      resumes, we will contact you for further information. Please fill out the
-      contact information below and we will reach out for additional
-      information. We appreciate your patience.
-    </p>
-    <form class="franchise-form">
-      <label class="franchise-form__label">
+    <div class="franchise-window__text--wrapper">
+      <p class="franchise-window__text">
+        Due to the overwhelming volume of franchise requests we are not
+        accepting new franchisee applications at this time. Once the application
+        process resumes, we will contact you for further information. Please
+        fill out the contact information below and we will reach out for
+        additional information. We appreciate your patience.
+      </p>
+    </div>
+    <form class="franchise-form js-speaker-form" autocomplete="off">
+      <div class="franchise-form__wrapper">
         <input
           class="franchise-form__input"
           type="text"
           name="name"
-          placeholder="Name"
+          id="name"
+          placeholder=" "
+          required
+          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+          title="Username must be two words separated by space."
         />
-      </label>
+        <label class="franchise-form__label" for="name">Name </label>
+      </div>
 
-      <label class="franchise-form__label">
+      <div class="franchise-form__wrapper">
         <input
           class="franchise-form__input"
           type="tel"
           name="tel"
-          placeholder="Phone"
+          id="tel"
+          placeholder=" "
+          required
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          title="Format: 123-456-7890"
         />
-      </label>
+        <label class="franchise-form__label" for="tel">Phone </label>
+      </div>
 
-      <label class="franchise-form__label">
+      <div class="franchise-form__wrapper">
         <input
           class="franchise-form__input"
           type="email"
           name="email"
-          placeholder="Email"
+          id="email"
+          placeholder=" "
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
         />
-      </label>
+        <label class="franchise-form__label" for="email">Email </label>
+      </div>
 
-      <label class="franchise-form__label">
+      <div class="franchise-form__wrapper">
         <textarea
-          class="franchise-form__input franchise-form__input--change-size"
+          class="franchise-form__textarea franchise-form__textarea--change-size"
           name="comment"
-          placeholder="Comment"
+          id="comment"
+          placeholder=" "
+          pattern="[A-Za-z]{3}"
         ></textarea>
-      </label>
-
-      <button type="submit" class="franchise-form__button">Submit</button>
+        <label class="franchise-form__label-textarea" for="comment"
+          >Comment
+        </label>
+      </div>
     </form>
+    <button type="submit" class="franchise-form__button">Submit</button>
   </div>
 </div>
