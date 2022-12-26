@@ -1,0 +1,253 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+
+  @media (min-width: 768px) {
+    padding-top: 20px;
+  }
+  @media (min-width: 1200px) {
+    padding-top: 8px;
+    align-items: center;
+  }
+}
+
+.logo {
+  width: 40px;
+  height: 37px;
+
+  @media screen and (min-width: 768px) {
+    width: 48px;
+    height: 44px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 60px;
+    height: 65px;
+    margin-right: 308px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+
+  .buy-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .tablet-menu {
+    display: none;
+  }
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 12px 20px 64px 32px;
+
+  @media (min-width: 768px) {
+    padding: 20px 32px 0;
+  }
+
+  background-color: #85a279;
+  text-align: center;
+
+  z-index: 2;
+
+  transform: translateX(100%);
+  transition: transform $transition-timing $timing-function;
+}
+
+.menu-toggle {
+  @media (min-width: 1200px) {
+    display: none;
+  }
+  &.js-open-menu {
+    @media (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 32px;
+    }
+  }
+
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 0;
+
+  color: getColor('white-text');
+  background-color: transparent;
+
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+
+  & .menu-toggle {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+
+    height: 32px;
+
+    @media (min-width: 768px) {
+      top: 32px;
+      right: 32px;
+    }
+    color: getColor('white-text');
+  }
+}
+
+.icon-menu,
+.icon-close {
+  fill: currentColor;
+  width: 32px;
+  height: 32px;
+}
+
+.nav__list,
+.mob-nav__list {
+  @extend %list;
+}
+
+.mob-nav {
+  &__list {
+    margin-top: 100px;
+    margin-bottom: auto;
+
+    text-align: center;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &-item__link {
+    text-decoration: none;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.22;
+    color: getColor('white-text');
+
+    transition: color $transition-timing $timing-function;
+
+    @media (min-width: 768px) {
+      font-size: 48px;
+      line-height: 1.23;
+    }
+  }
+}
+
+.mob-nav-item__link:hover,
+.mob-nav-item__link:focus {
+  color: getColor('black-text');
+}
+
+.buy-btn--none {
+  margin-top: 110px;
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.header-nav {
+  margin-right: 205px;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.nav-item__link {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: getColor('white-text');
+
+  transition: color $transition-timing $timing-function;
+
+  &:hover,
+  &:focus {
+    color: getColor('hover-accent');
+  }
+}
+
+.buy-btn--none {
+  @media (max-width: 767px) {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.buy-btn {
+  display: none;
+
+  @media (min-width: 767px) {
+    display: flex;
+  }
+}
+
+.buy-btn,
+.buy-btn--none {
+  align-items: center;
+  text-align: center;
+
+  width: 152px;
+  height: 42px;
+
+  padding: 12px 36px;
+  background-color: getColor('hover-accent');
+  color: getColor('black-text');
+
+  border: none;
+  border-radius: 10px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+
+  transition: background-color $transition-timing $timing-function,
+    color $transition-timing $timing-function,
+    fill $transition-timing $timing-function;
+
+  &:hover {
+    background-color: getColor('hover-second');
+    color: getColor('button-text');
+    fill: getColor('button-text');
+  }
+
+  &:focus {
+    background-color: getColor('hover-second');
+    color: getColor('focus-btn-text');
+    fill: getColor('focus-btn-text');
+  }
+}
+
+.btn-icon {
+  fill: currentColor;
+  margin-left: 4px;
+}
