@@ -14,20 +14,13 @@
 }
 
 .advantages-statistics__item {
-    &:last-child {
-        margin-top: 22px;
-
-        @media screen and (min-width: 767px) {
-            margin-top: 0px;
+    @media screen and (max-width: 767px) {
+        &:last-child {
+            margin-top: 22px;
         }
 
-    }
-
-    &:nth-child(2) {
-        margin-top: 28px;
-
-        @media screen and (min-width: 767px) {
-            margin-top: 0px;
+        &:nth-child(2) {
+            margin-top: 28px;
         }
     }
 }
