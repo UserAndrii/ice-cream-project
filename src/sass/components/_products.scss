@@ -104,7 +104,7 @@
 
 .products-list__item {
   &:not(:last-child) {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 168px;
     }
   }
@@ -119,6 +119,7 @@
 }
 
 .products-list__thumb {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -138,7 +139,6 @@
     padding-left: 26px;
     padding-right: 26px;
     padding-bottom: 12px;
-    padding-top: 108px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -151,34 +151,203 @@
 }
 
 .first {
-  background-color: getColor('bg-primary');
-}
+  background-color: #aec6a5;
 
-.first::before {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  transform: translateY(-50%);
+  &::before {
+    content: '  ';
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    z-index: 2;
 
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
 
-  background-image: url(../images/products/mobile_tablet/icecream_mobile_tablet@1x.jpg),
-    linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)),
-    #d9d9d9;
+    background-image: url(../images/products/mobile_tablet/icecream_mobile_tablet@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/products/mobile_tablet/icecream_mobile_tablet@2x.jpg);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 302px;
+      height: 302px;
+      border-radius: 150px;
+      background-image: url(../images/products/desktop/icecream_desktop@1x.jpg);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/products/desktop/icecream_desktop@2x.jpg);
+      }
+    }
+  }
+
+  &::after {
+    content: '  ';
+    position: absolute;
+    top: 0;
+    transform: translateY(-48%);
+    z-index: 1;
+
+    width: 200px;
+    height: 211px;
+    border-radius: 100px;
+
+    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+
+    background-image: linear-gradient(
+        0deg,
+        rgba(156, 190, 143, 0.7),
+        rgba(156, 190, 143, 0.7)
+      ),
+      #d9d9d9;
+    @media screen and (min-width: 1200px) {
+      width: 302px;
+      height: 318px;
+      border-radius: 150px;
+    }
+  }
 }
 
 .second {
   background-color: #efd478;
+
+  &::before {
+    content: '  ';
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+
+    background-image: url(../images/products/mobile_tablet/icecoffee_mobile_tablet@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/products/mobile_tablet/icecoffee_mobile_tablet@2x.jpg);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 302px;
+      height: 302px;
+      border-radius: 150px;
+      background-image: url(../images/products/desktop/icecoffee_desktop@1x.jpg);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/products/desktop/icecoffee_desktop@2x.jpg);
+      }
+    }
+  }
+
+  &::after {
+    content: '  ';
+    position: absolute;
+    top: 0;
+    transform: translateY(-48%);
+    z-index: 1;
+
+    width: 200px;
+    height: 211px;
+    border-radius: 100px;
+
+    box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+
+    background-image: linear-gradient(
+        0deg,
+        rgba(248, 210, 78, 0.7),
+        rgba(248, 210, 78, 0.7)
+      ),
+      #d9d9d9;
+
+    @media screen and (min-width: 1200px) {
+      width: 302px;
+      height: 318px;
+      border-radius: 150px;
+    }
+  }
 }
+
 .third {
   background-color: getColor('address-text');
+
+  &::before {
+    content: '  ';
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+
+    background-image: url(../images/products/mobile_tablet/milkshake_mobile_tablet@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/products/mobile_tablet/milkshake_mobile_tablet@2x.jpg);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 302px;
+      height: 302px;
+      border-radius: 150px;
+      background-image: url(../images/products/desktop/milkshake_desktop@1x.jpg);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/products/desktop/milkshake_desktop@2x.jpg);
+      }
+    }
+  }
+
+  &::after {
+    content: '  ';
+    position: absolute;
+    top: 0;
+    transform: translateY(-48%);
+    z-index: 1;
+
+    width: 200px;
+    height: 211px;
+    border-radius: 100px;
+
+    box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+
+    background-image: linear-gradient(
+        0deg,
+        rgba(213, 117, 63, 0.7),
+        rgba(213, 117, 63, 0.7)
+      ),
+      #d9d9d9;
+
+    @media screen and (min-width: 1200px) {
+      width: 302px;
+      height: 318px;
+      border-radius: 150px;
+    }
+  }
 }
 
 .products-list__title {
@@ -217,10 +386,4 @@
   @media screen and (min-width: 1200px) {
     font-size: 16px;
   }
-}
-
-.products-list__btn {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
