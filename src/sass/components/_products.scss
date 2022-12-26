@@ -56,7 +56,7 @@
     font-size: 30px;
   }
 }
-
+// ОСНОВНИЙ ЗАГОЛОВОК
 .products__title {
   margin-bottom: 148px;
 
@@ -81,7 +81,7 @@
     margin-bottom: 303px;
   }
 }
-
+// СПИСОК КАРТОК
 .products-list {
   @extend %list;
   display: flex;
@@ -139,6 +139,7 @@
     padding-left: 26px;
     padding-right: 26px;
     padding-bottom: 12px;
+    padding-top: 108px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -149,15 +150,15 @@
     padding-top: 165px;
   }
 }
-
+// ПЕРША КАРТКА (КОЛІР, КАРТИНКА ТА ГРАДІЄНТ)
 .first {
   background-color: #aec6a5;
-
+  // Перша картинка ICECREAM
   &::before {
     content: '  ';
     position: absolute;
     top: 0;
-    transform: translateY(-50%);
+    transform: translateY(-55%);
     z-index: 2;
 
     width: 200px;
@@ -188,12 +189,12 @@
       }
     }
   }
-
+  // ПЕРШИЙ ЗЕЛЕНИЙ ГРАДІЄНТ
   &::after {
     content: '  ';
     position: absolute;
     top: 0;
-    transform: translateY(-48%);
+    transform: translateY(-53%);
     z-index: 1;
 
     width: 200px;
@@ -215,15 +216,15 @@
     }
   }
 }
-
+// ДРУГА КАРТКА (КОЛІР, КАРТИНКА ТА ГРАДІЄНТ)
 .second {
   background-color: #efd478;
-
+  // Друга картинка ICECOFFEE
   &::before {
     content: '  ';
     position: absolute;
     top: 0;
-    transform: translateY(-50%);
+    transform: translateY(-55%);
     z-index: 2;
 
     width: 200px;
@@ -254,12 +255,12 @@
       }
     }
   }
-
+  // ДРУГИЙ ПОМАРАНЧЕВИЙ ГРАДІЄНТ
   &::after {
     content: '  ';
     position: absolute;
     top: 0;
-    transform: translateY(-48%);
+    transform: translateY(-53%);
     z-index: 1;
 
     width: 200px;
@@ -282,15 +283,15 @@
     }
   }
 }
-
+// ТРЕТЯ КАРТКА (КОЛІР, КАРТИНКА ТА ГРАДІЄНТ)
 .third {
   background-color: getColor('address-text');
-
+  // Третя картинка MILKSHAKE
   &::before {
     content: '  ';
     position: absolute;
     top: 0;
-    transform: translateY(-50%);
+    transform: translateY(-55%);
     z-index: 2;
 
     width: 200px;
@@ -321,12 +322,12 @@
       }
     }
   }
-
+  // ТРЕТІЙ КОРИЧНЕВИЙ ГРАДІЄНТ
   &::after {
     content: '  ';
     position: absolute;
     top: 0;
-    transform: translateY(-48%);
+    transform: translateY(-53%);
     z-index: 1;
 
     width: 200px;
@@ -349,7 +350,7 @@
     }
   }
 }
-
+// ЗАГОВОЛОК КАРТКИ
 .products-list__title {
   margin-bottom: 40px;
 
@@ -371,7 +372,7 @@
     margin-bottom: 66px;
   }
 }
-
+// ТЕКСТ КАРТКИ
 .products-list__text {
   margin-bottom: auto;
 
