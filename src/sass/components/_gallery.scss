@@ -1,10 +1,45 @@
 .gallery {
-  width: 100%;
+  position: relative;
+}
+
+.bg-wrapper {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 100vw;
   height: 1037px;
-  background-image: url(../images/backgroud_desktop@1x.jpg);
+  z-index: -1;
   background-repeat: repeat-y;
   background-position: center;
   background-size: cover;
+  background-image: url(../images/backgroud_mobile@1x.jpg);
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/backgroud_mobile@2x.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 140px;
+    height: 1017px;
+    background-image: url(../images/background_tablet@1x.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/background_tablet@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    top: 100px;
+    height: 1053px;
+    background-image: url(../images/backgroud_desktop@1x.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/backgroud_desktop@2x.jpg);
+    }
+  }
 }
 
 .slider__item-gallery {
