@@ -45,7 +45,6 @@
 
 .menu-container {
   position: fixed;
-  z-index: 3;
   top: 0;
   left: 0;
   width: 100vw;
@@ -93,6 +92,7 @@
 
 .menu-container.is-open {
   transform: translateX(0);
+  z-index: 3;
 
   & .menu-toggle {
     position: absolute;
