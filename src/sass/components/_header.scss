@@ -45,6 +45,7 @@
 
 .menu-container {
   position: fixed;
+  z-index: 3;
   top: 0;
   left: 0;
   width: 100vw;
@@ -155,13 +156,6 @@
   color: getColor('black-text');
 }
 
-.buy-btn--none {
-  margin-top: 110px;
-  @media (min-width: 768px) {
-    display: none;
-  }
-}
-
 .header-nav {
   margin-right: 205px;
 }
@@ -192,6 +186,8 @@
 }
 
 .buy-btn--none {
+  margin-top: 110px;
+  cursor: pointer;
   @media (max-width: 767px) {
     display: flex;
     margin-left: auto;
@@ -205,6 +201,7 @@
 
 .buy-btn {
   display: none;
+  cursor: pointer;
 
   @media (min-width: 767px) {
     display: flex;
