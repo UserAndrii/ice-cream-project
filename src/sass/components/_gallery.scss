@@ -1,0 +1,27 @@
+.gallery {
+  width: 100%;
+  height: 1037px;
+  background-image: url(../images/backgroud_desktop@1x.jpg);
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: cover;
+}
+
+.slider__item-gallery {
+  max-width: 280px;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 8px;
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    max-width: 704px;
+    border-radius: 18px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1013px;
+    border-radius: 24px;
+  }
+}

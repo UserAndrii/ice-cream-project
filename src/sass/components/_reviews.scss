@@ -1,0 +1,68 @@
+.reviews {
+  padding-top: 80px;
+  // background-image: url(../images/backgroud_mobile@1x.jpg);
+  // background-repeat: repeat-y;
+  // background-position: center;
+  // background-size: cover;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 140px;
+    padding-bottom: 60px;
+  }
+}
+
+.reviews__img-wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  max-width: 85px;
+}
+
+.reviews__description {
+  padding: 35px 40px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 32px;
+  border-radius: 10px;
+  max-width: 280px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2.55;
+  color: getColor('white-text');
+  background: getColor('bg-primary');
+
+  @media screen and (min-width: 768px) {
+    padding: 29px 80px;
+    max-width: 705px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 43px 109px;
+    max-width: 968px;
+    font-size: 16px;
+  }
+}
+
+.reviews__person {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.86;
+  color: getColor('black-text');
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+}
