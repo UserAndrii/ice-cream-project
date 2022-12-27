@@ -23,7 +23,7 @@
             </svg>
         </button>
 
-        <button data-modal-open class="buy-btn" type="button">Buy now
+        <button by-me-modal-open class="buy-btn" type="button">Buy now
             <svg class="btn-icon" width="12" height="12">
                 <use href="./images/icons.svg#icon-arrow"></use>
             </svg>
@@ -63,9 +63,59 @@
     </div>
 
 
-    <button data-modal-open class="buy-btn--none" type="button">Buy now
+    <button class="buy-btn--none" type="button" by-me-mobile-open>Buy now
         <svg class="btn-icon" width="12px" height="12px">
             <use href="./images/icons.svg#icon-arrow"></use>
         </svg>
     </button>
+
+
+
+
+  <!-- mobile modal -->
+
+  <div class="backdrop by-my_is-hidden" by-me-mobile-modal>
+    <div class="buy-me-modal">
+      <button type="button" class="modal__close-btn" by-me-mobile-close>
+        <svg class="modal__site-icon" width="20px" height="20px">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <div class="buy-me-modal__wrap">
+        <b class="buy-me__title">Buy now</b>
+        <div class="products__wrap">
+        <div class="product-card-container">
+        <div class="buy-me-img__box">
+        <img src="./images/products/mobile_tablet/icecream_mobile_tablet@1x.jpg" class="buy-me__img" alt="icecream photo">
+      </div>
+        <div class="buy-me__product-card">
+        <p class="product__discript">ice cream</p>
+      </div>
+        </div>
+        <div class="product-card-container">
+          <div class="buy-me-img__box accent-second-card">
+          <img src="./images/products/mobile_tablet/icecoffee_mobile_tablet@1x.jpg" class="buy-me__img" alt="icecream photo">
+        </div>
+          <div class="buy-me__product-card accent-second-border">
+          <p class="product__discript">ice coffee</p>
+        </div>
+          </div>
+          <div class="product-card-container">
+            <div class="buy-me-img__box accent-last-card">
+            <img src="./images/products/mobile_tablet/milkshake_mobile_tablet@1x.jpg" class="buy-me__img" alt="icecream photo">
+          </div>
+            <div class="buy-me__product-card accent-last-border">
+            <p class="product__discript">milkshake</p>
+          </div>
+            </div></div>
+            <form class="buy-me__form">
+      <input type="text" id="name" name="name" class="form__input" placeholder="Name">
+      <input type="tel" id="tel" name="tel" class="form__input" placeholder="Phone">
+      <textarea class="form__input" type="textarea" id="comment" name="comment" placeholder="Comment"></textarea>
+      <button type="submit" class="buy-me-btn">Submit</button>
+            </form>
+      </div>
+    </div>
+    </div>
+
 </div>
