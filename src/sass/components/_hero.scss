@@ -27,8 +27,9 @@
 }
 
 .hero__title {
-  margin: 16px auto 32px 20px;
-
+  margin-right: 400px;
+  margin-bottom: 32px;
+  padding-top: 50px;
   font-family: $title-font;
   font-size: 26px;
   line-height: 1.27;
@@ -36,7 +37,12 @@
   text-transform: uppercase;
   color: getColor('focus-btn-text');
 
+  @media screen and (min-width:768px){
+    padding-top: 15px ;
+  }
+
   @media screen and (min-width:1200px) {
+    padding-top: 40px;
     font-size: 38px;
     line-height: 1.26;
   }
@@ -54,7 +60,6 @@
 }
 
 .hero__points-of-sale {
-  margin-right: 32px;
 
   @media screen and (max-width:767px) {
     display: none;
@@ -75,6 +80,7 @@
 
 
 .hero__link--number {
+  margin-bottom: 4px;
   font-weight: 900;
   font-size: 28px;
   line-height: 1.21;
@@ -89,6 +95,7 @@
 }
 
 .hero__link {
+  margin-bottom: 20px;
   font-family: $primary-font;
   font-weight: 400;
   font-size: 8px;
@@ -96,6 +103,7 @@
   color: getColor("white-text");
 
   @media screen and (min-width:1200px) {
+    margin-bottom: 16px;
     font-size: 14px;
     line-height: 1.21;
   }
@@ -147,7 +155,7 @@
 .hero__picture--ice-cream {
   position: absolute;
   bottom: 0;
-  right: 25%;
+  right: 19%;
   width: 177px;
 
   transition: $transition-timing $timing-function;
