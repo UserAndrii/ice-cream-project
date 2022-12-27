@@ -15,13 +15,13 @@
   transition: opacity 250ms var(--cubic);
 }
 
-// .backdrop_is-hidden{
-//   opacity: 0;
-//   pointer-events: none;
-//   & .buy-me-modal{
-// transform:translate(-50%, -50%) scaleX(0.1) scaleY(0.1);
-// }
-// }
+.backdrop_is-hidden{
+  opacity: 0;
+  pointer-events: none;
+  & .buy-me-modal{
+transform:translate(-50%, -50%) scaleX(0.1) scaleY(0.1);
+}
+}
 
 .buy-me-modal{
   position: absolute;
