@@ -125,6 +125,7 @@
 }
 
 .hero__img--plate {
+  position: absolute;
   width: 152px;
   margin-right: 32px;
   border-radius: 50%;
@@ -142,6 +143,7 @@
 .hero__text--paragraph {
   width: 139px;
   height: 85px;
+  margin-left: 215px;
   margin-bottom: 12px;
   font-family: $primary-font;
   font-weight: 400;
