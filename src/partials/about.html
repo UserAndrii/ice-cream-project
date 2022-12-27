@@ -3,7 +3,35 @@
     <p class="about__label">TRADITION AND LOVE</p>
     <h2 class="about__title">HOW IT’S MADE?</h2>
     <div class="about__content">
-      <div class="image-box"></div>
+      <div class="image-box">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="
+              ./images/about/cow_desktop@1x.webp 1x,
+              ./images/about/cow_desktop@2x.webp 2x
+            " type="image/webp" />
+          <source media="(min-width: 768px)" srcset="
+              ./images/about/cow_tablet@1x.webp 1x,
+              ./images/about/cow_tablet@2x.webp 2x
+            " type="image/webp" />
+          <source media="(max-width: 767px)" srcset="
+              ./images/about/cow_mobile@1x.webp 1x,
+              ./images/about/cow_mobile@2x.webp 2x
+            " type="image/webp" />
+          <source media="(min-width: 1200px)" srcset="
+              ./images/about/cow_desktop@1x.jpg 1x,
+              ./images/about/cow_desktop@2x.jpg 2x
+            " type="image/jpg" />
+          <source media="(min-width: 768px)" srcset="
+              ./images/about/cow_tablet@1x.jpg 1x,
+              ./images/about/cow_tablet@2x.jpg 2x
+            " type="image/jpg" />
+          <source media="(max-width: 767px)" srcset="
+              ./images/about/cow_mobile@1x.jpg 1x,
+              ./images/about/cow_mobile@2x.jpg 2x
+            " type="image/jpg" />
+          <img src="./images/about/cow_mobile@1x.jpg" alt="cow" class="image-box__cow" loading="lazy" />
+        </picture>
+      </div>
       <div class="text">
         <p class="text__introduction">
           Ice is a place where you will become not only a little happier, but
@@ -20,7 +48,7 @@
           This is enough to choose ice cream and coffee for any mood!
         </p>
 
-        <button type="button" class="btn-group__btn-readmore">
+        <button type="button" class="btn-group__btn-readmore" read-more-modal-open>
           Read more
           <svg class="btn-group__icon" width="12" height="12">
             <use href="./images/icons.svg#icon-arrow-right"></use>

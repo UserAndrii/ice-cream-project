@@ -3,6 +3,10 @@ body {
   color: getColor('white-text');
 
   font-family: $primary-font;
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 h1,
