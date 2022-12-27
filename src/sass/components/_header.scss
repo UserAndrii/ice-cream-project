@@ -248,3 +248,10 @@
   fill: currentColor;
   margin-left: 4px;
 }
+
+.hystmodal__opened {
+  position: fixed;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+}
