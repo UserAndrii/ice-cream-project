@@ -153,9 +153,18 @@
 
   @media screen and (min-width: 1200px) {
     margin-top: 75px;
+    margin-left: 240px;
     width: 200px;
     height: 80px;
     font-size: 14px;
+  }
+}
+
+.hero__svg{
+  margin-left: 215px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 240px;
   }
 }
 
@@ -172,7 +181,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    width: 456px;
+    max-width: 456px;
     right: 7%;
   }
 }
