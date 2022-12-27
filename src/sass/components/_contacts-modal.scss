@@ -263,7 +263,7 @@
 }
 
 .franchise-window__text {
-  color: #131313;
+  color: getColor('black-text');
   font-size: 14px;
   line-height: 1.4;
   margin-bottom: 24px;
@@ -296,11 +296,11 @@
 }
 
 .franchise-form__input {
-  color: #131313;
+  color: getColor('black-text');
   font-size: 12px;
   line-height: 1.4;
   background-color: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  border: 1px solid getColor('bg-primary');
   border-radius: 10px;
   outline: transparent;
 
@@ -322,7 +322,7 @@
   }
 
   &:focus {
-    border: 2px solid #84a178;
+    border: 2px solid getColor('bg-primary');
   }
 
   &:focus + .franchise-form__label,
@@ -331,7 +331,7 @@
     transform: translate(0px, -27px) scale(0.7);
 
     @media screen and (min-width: 768px) {
-      transform: translate(15px, -37px) scale(1);
+      transform: translate(15px, -37px) scale(0.9);
     }
   }
 }
@@ -343,7 +343,7 @@
   padding: 2px 10px;
   border-radius: 10px;
 
-  color: #131313;
+  color: getColor('black-text');
   background-color: inherit;
   font-size: 12px;
   line-height: 1.4;
@@ -358,11 +358,11 @@
 }
 
 .franchise-form__textarea {
-  color: #131313;
+  color: getColor('black-text');
   font-size: 12px;
   line-height: 1.4;
   background-color: rgba(248, 210, 78, 0.1);
-  border: 1px solid #84a178;
+  border: 1px solid getColor('bg-primary');
   border-radius: 10px;
   outline: transparent;
 
@@ -392,17 +392,16 @@
   }
 
   &:focus {
-    border: 2px solid #84a178;
+    border: 2px solid getColor('bg-primary');
   }
 
   &:focus + .franchise-form__label-textarea,
   &:not(:placeholder-shown) + .franchise-form__label-textarea {
     background-color: getColor('hover-second');
     transform: translate(0px, -27px) scale(0.7);
-    border: 1px solid green;
 
     @media screen and (min-width: 768px) {
-      transform: translate(15px, -33px) scale(1);
+      transform: translate(15px, -33px) scale(0.9);
     }
   }
 }
@@ -418,7 +417,7 @@
   transition: background-color $transition-timing $timing-function,
     transform $transition-timing $timing-function;
 
-  color: #131313;
+  color: getColor('black-text');
   background-color: inherit;
   font-size: 12px;
   line-height: 1.4;
