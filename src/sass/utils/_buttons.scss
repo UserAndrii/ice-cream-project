@@ -7,6 +7,7 @@
     align-items: center;
     text-align: center;
     padding: 11px 26px;
+    margin-left: 32px;
       
     background-color: transparent;
     color: getColor('button-text');
@@ -114,9 +115,11 @@
     align-items: center;
     text-align: center;
     text-decoration-line: underline;
+    border: none ;
+    margin-left: 12px;
       
     background-color: transparent;
-    color: getColor('hovert-accent');
+    color: getColor('hover-accent');
       
     font-family: inherit;
     font-weight: 600;
@@ -127,6 +130,7 @@
     @media screen and (min-width:1200px) {
         font-size: 14px;
         line-height: 1.21;
+        margin-left: 34px;
     }  
 
     transition: background-color $transition-timing $timing-function,
