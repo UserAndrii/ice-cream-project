@@ -171,9 +171,13 @@
 .hero__picture--ice-cream {
   position: absolute;
   bottom: 0;
-  right: 19%;
   width: 177px;
   transition: $transition-timing $timing-function;
+
+  @media screen and (max-width: 767px) {
+    right: 50%;
+    transform: translateX(56%);
+  }
 
   @media screen and (min-width: 768px) {
     width: 268px;
@@ -181,7 +185,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    max-width: 456px;
+    width: 456px;
     right: 7%;
   }
 }
