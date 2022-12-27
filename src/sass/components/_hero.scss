@@ -26,26 +26,28 @@
   display: flex;
 
   @media screen and (min-width: 1200px) {
-      height: 220px;
-    }
+    height: 220px;
+  }
 }
 
 .hero__title--wrapper {
   margin-bottom: 32px;
   max-width: 367px;
+  padding-top: 50px;
 
   @media screen and (min-width: 768px) {
+    padding-top: 14px;
     margin-bottom: 24px;
     margin-right: auto;
   }
 
   @media screen and (min-width: 1200px) {
-    margin-bottom:0;
+    padding-top: 45px;
+    margin-bottom: 0;
   }
 }
 
 .hero__title {
-  padding-top: 16px;
   font-family: $title-font;
   font-size: 26px;
   line-height: 1.27;
@@ -163,7 +165,7 @@
   }
 }
 
-.hero__svg{
+.hero__svg {
   margin-left: 215px;
 
   @media screen and (min-width: 1200px) {
