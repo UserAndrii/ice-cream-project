@@ -38,6 +38,7 @@ $(document).ready(function () {
     touchThreshold: 10,
     touchMove: true,
     waitForAnimate: false,
+    centerMode: true,
     fade: true,
     cssEase: 'linear',
   });

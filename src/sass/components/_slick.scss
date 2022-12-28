@@ -70,3 +70,9 @@
     background-color: getColor('bg-primary');
   }
 }
+
+.gallery__slider {
+  @media screen and (min-width: 1200px) {
+    padding: 0 77px;
+  }
+}
