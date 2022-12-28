@@ -8,12 +8,18 @@
       openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     mobileMenu.classList.toggle('is-open');
+    document.body.classList.toggle('hystmodal__opened');
 
     const scrollLockMethod = !isMenuOpen
       ? 'disableBodyScroll'
       : 'enableBodyScroll';
     bodyScrollLock[scrollLockMethod](document.body);
   };
+
+  $('.mob-nav-item__link').click(function () {
+    mobileMenu.classList.toggle('is-open');
+    document.body.classList.toggle('hystmodal__opened');
+  });
 
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);

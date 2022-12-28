@@ -7,6 +7,13 @@ body {
   &.modal-open {
     overflow: hidden;
   }
+
+  &.hystmodal__opened {
+    position: fixed;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+  }
 }
 
 h1,

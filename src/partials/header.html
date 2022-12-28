@@ -1,66 +1,75 @@
 <header>
-    <div class="container header">
-        <img class="logo" src="./images/logo.png" alt="Логотип">
+  <div class="container header">
+    <img class="logo" src="./images/logo.png" alt="Логотип" />
 
-        <div class="menu">
-            <div class="tablet-menu">
-                <nav class="header-nav">
-                    <ul class="nav__list">
-                        <li class="nav__item"> <a class="nav-item__link" href="#home">Home</a> </li>
-                        <li class="nav__item"> <a class="nav-item__link" href="#how-it's-made"> How it's made?</a>
-                        </li>
-                        <li class="nav__item"> <a class="nav-item__link" href="#products">Our products </a></li>
-                        <li class="nav__item"> <a class="nav-item__link" href="#contacts"> Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-        </div>
-        <button btn-open type="button" class="menu-toggle js-open-menu  " aria-expanded="false"
-            aria-controls="mobile-menu">
-            <svg class="icon-close" width="32" heigth="32">
-                <use href="./images/icons.svg#icon-menu"></use>
-            </svg>
-        </button>
-
-        <button by-me-modal-open class="buy-btn" type="button">Buy now
-            <svg class="btn-icon" width="12" height="12">
-                <use href="./images/icons.svg#icon-arrow"></use>
-            </svg>
-        </button>
-
-
-
-
-
+    <div class="menu">
+      <div class="tablet-menu">
+        <nav class="header-nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav-item__link" href="#home">Home</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav-item__link" href="#how-its-made"> How it's made?</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav-item__link" href="#products">Our products </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav-item__link" href="#contacts"> Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
+    <button
+      type="button"
+      class="menu-toggle js-open-menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg class="icon-close" width="32" heigth="32">
+        <use href="./images/icons.svg#icon-menu"></use>
+      </svg>
+    </button>
 
+    <button data-modal-open class="buy-btn" type="button">
+      Buy now
+      <svg class="btn-icon" width="12" height="12">
+        <use href="./images/icons.svg#icon-arrow"></use>
+      </svg>
+    </button>
+  </div>
 </header>
-
-
 
 <!-- Додати перед закриваючим тегом body -->
 <div class="menu-container js-menu-container" id="mobile-menu">
-    <button btn-close type="button" class="menu-toggle js-close-menu">
-        <svg class="icon-close" width="32" heigth="32">
-            <use href="./images/icons.svg#icon-close"></use>
-        </svg>
-    </button>
+  <button type="button" class="menu-toggle js-close-menu">
+    <svg class="icon-close" width="32" heigth="32">
+      <use href="./images/icons.svg#icon-close"></use>
+    </svg>
+  </button>
 
-    <img class="logo" src="./images/logo.png" alt="Логотип">
+  <img class="logo" src="./images/logo.png" alt="Логотип" />
 
-    <div class="mobile-menu">
-        <nav class="mob-header-nav">
-            <ul class="mob-nav__list">
-                <li class="mob-nav__item"> <a class="mob-nav-item__link" href="#home">Home</a> </li>
-                <li class="mob-nav__item"> <a class="mob-nav-item__link" href="#how-it's-made"> How it's
-                        made?</a>
-                </li>
-                <li class="mob-nav__item"> <a class="mob-nav-item__link" href="#products">Our products </a></li>
-                <li class="mob-nav__item"> <a class="mob-nav-item__link" href="#contacts"> Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+  <div class="mobile-menu">
+    <nav class="mob-header-nav">
+      <ul class="mob-nav__list">
+        <li class="mob-nav__item">
+          <a class="mob-nav-item__link" href="#home">Home</a>
+        </li>
+        <li class="mob-nav__item">
+          <a class="mob-nav-item__link" href="#how-its-made"> How it's made?</a>
+        </li>
+        <li class="mob-nav__item">
+          <a class="mob-nav-item__link" href="#products">Our products </a>
+        </li>
+        <li class="mob-nav__item">
+          <a class="mob-nav-item__link" href="#contacts"> Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
 
     <button class="buy-btn--none" type="button" by-me-mobile-open>Buy now
@@ -124,6 +133,7 @@
                                 <p class="product__discript">milkshake</p>
                             </div>
                         </div>
+                    </form>
                 </div>
 
                 <input type="text" id="name" name="name" class="form__input" placeholder="Name" autocomplete="off">

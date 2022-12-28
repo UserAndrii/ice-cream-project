@@ -43,10 +43,8 @@
 }
 
 .slider__item-gallery {
-  max-width: 280px;
+  max-width: 480px;
   height: 100%;
-  margin-right: auto;
-  margin-left: auto;
   border-radius: 8px;
   overflow: hidden;
 
@@ -58,5 +56,7 @@
   @media screen and (min-width: 1200px) {
     max-width: 1013px;
     border-radius: 24px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }

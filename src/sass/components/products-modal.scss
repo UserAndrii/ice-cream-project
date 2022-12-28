@@ -1,0 +1,378 @@
+.products-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  overflow-y: scroll;
+
+  transition: opacity $transition-timing $timing-function,
+    visibility $transition-timing $timing-function;
+
+  font-family: $primary-font;
+  color: getColor('black-text');
+}
+
+.products-backdrop__is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  & .products-modal {
+    transform: translate(-50%, -50%) scaleX(0.1) scaleY(0.1);
+  }
+}
+// ВІКНО МОДАЛКИ
+.products-modal {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  z-index: 20;
+  width: 280px;
+  padding: 28px 20px;
+
+  transform: translate(-50%, -50%) scaleX(1) scaleY(1);
+  transition: transform 500ms var(--cubic);
+
+  background-color: #fcfcfc;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+
+  @media screen and (min-width: 768px) {
+    width: 568px;
+    padding: 32px 40px;
+  }
+}
+
+// КНОПКА ЗАКРИТТЯ
+.products-modal__btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  top: 12px;
+  right: 12px;
+
+  min-width: 30px;
+  min-height: 30px;
+  fill: currentColor;
+  background-color: transparent;
+  border: none;
+}
+// ЗАГОЛОВОК МОДАЛКИ
+.products-modal__title {
+  margin-bottom: 20px;
+
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 24px;
+  }
+}
+// ОБГОРТКА КАРТИНКИ
+.products-box {
+  display: flex;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 22px;
+  width: 132px;
+  height: 132px;
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  border-radius: 50%;
+}
+// КАРТИНКА
+.products-box__picture {
+  position: absolute;
+  background-color: transparent;
+  bottom: 6px;
+  width: 132px;
+  z-index: 3;
+  border-radius: 50%;
+  border: 1px solid #000000;
+}
+// СПИСОК МАКРОЕЛЕМЕНТІВ (БІЛКИ, ЖИРИ, ВУГЛЕВОДИ)
+.macroelements {
+  @extend %list;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 48px;
+  }
+}
+
+.macroelements__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 9px;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.macroelements__position {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 53px;
+  height: 72px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+
+  border: 2px solid #9cbe8f;
+  border-radius: 40px;
+
+  @media screen and (min-width: 768px) {
+    width: 65px;
+    height: 90px;
+    padding-bottom: 12px;
+    padding-top: 8px;
+  }
+}
+
+.macroelements__grams {
+  min-height: 27px;
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 2.8;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 5px;
+
+    width: 43px;
+    height: 43px;
+
+    background: #9cbe8f;
+    border: 2px solid #9cbe8f;
+    box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+    border-radius: 50%;
+
+    @media screen and (min-width: 768px) {
+      width: 53px;
+      height: 53px;
+      right: 6px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    min-height: 27px;
+    margin-bottom: 19px;
+    font-size: 12px;
+  }
+}
+
+.macroelements__name {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
+}
+// ІНГРІДІЄНТИ
+.products-modal__pre-title {
+  margin-bottom: 24px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+}
+// СПИСОК ІНГРІДІЄНТІВ
+.ingredients {
+  @extend %list;
+  margin-bottom: 40px;
+}
+
+.ingredients__item {
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 11px;
+  }
+}
+.ingredients__food {
+  margin-right: auto;
+}
+
+.ingredients__food,
+.ingredients__gram {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.78;
+}
+// ФОРМА
+.products-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.products-form__wrapper {
+  position: relative;
+}
+
+.products-form__input {
+  color: getColor('black-text');
+  font-size: 14px;
+  line-height: 1.4;
+  background-color: rgba(248, 210, 78, 0.1);
+  border: 1px solid getColor('bg-primary');
+  border-radius: 10px;
+  outline: transparent;
+
+  width: 240px;
+  height: 42px;
+
+  padding: 11px 10px;
+
+  @media screen and (min-width: 768px) {
+    width: 368px;
+  }
+
+  &:hover {
+    border-color: getColor('hover-accent');
+  }
+
+  &:focus {
+    border: 2px solid getColor('bg-primary');
+  }
+
+  &:focus + .products-form__label,
+  &:not(:placeholder-shown) + .products-form__label {
+    background-color: getColor('hover-second');
+    transform: translate(0px, -32px) scale(0.7);
+  }
+}
+
+.products-form__label {
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  padding: 2px 10px;
+  border-radius: 10px;
+
+  color: getColor('black-text');
+  background-color: inherit;
+  font-size: 14px;
+  line-height: 1.4;
+
+  transform: translateY(-50%) scale(1);
+  transition: background-color $transition-timing $timing-function,
+    transform $transition-timing $timing-function;
+}
+
+.products-form__textarea {
+  color: getColor('black-text');
+  font-size: 14px;
+  line-height: 1.4;
+  background-color: rgba(248, 210, 78, 0.1);
+  border: 1px solid getColor('bg-primary');
+  border-radius: 10px;
+  outline: transparent;
+
+  width: 240px;
+  height: 84px;
+  padding: 11px 10px;
+
+  @media screen and (min-width: 768px) {
+    width: 368px;
+  }
+
+  &:hover {
+    border-color: getColor('hover-accent');
+  }
+
+  &:focus {
+    border: 2px solid getColor('bg-primary');
+  }
+
+  &:focus + .products-form__label-textarea,
+  &:not(:placeholder-shown) + .products-form__label-textarea {
+    background-color: getColor('hover-second');
+    transform: translate(0px, -32px) scale(0.7);
+  }
+}
+
+.products-form__label-textarea {
+  position: absolute;
+  top: 25%;
+  left: 3px;
+  padding: 2px 10px;
+  border-radius: 10px;
+
+  transform: translateY(-50%) scale(1);
+  transition: background-color $transition-timing $timing-function,
+    transform $transition-timing $timing-function;
+
+  color: getColor('black-text');
+  background-color: inherit;
+  font-size: 14px;
+  line-height: 1.4;
+}
+// КНОПКА ФОРМИ
+.products-form__button {
+  display: block;
+  color: getColor('black-text');
+  background-color: getColor('hover-accent');
+  padding: 12px 34px;
+  border-radius: 10px;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  border: none;
+  transition: background-color $transition-timing $timing-function,
+    color $transition-timing $timing-function;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 32px;
+  }
+
+  &:hover {
+    background-color: getColor('hover-second');
+    color: getColor('button-text');
+  }
+
+  &:focus {
+    background-color: getColor('hover-second');
+    color: getColor('focus-btn-text');
+  }
+}
