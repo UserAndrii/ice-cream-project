@@ -1,43 +1,62 @@
+<fieldset id="radioset">
+  <div>
+      <input class="check" type="radio" id="product1" name="icecream" value="icecream">
+  </div>
+  <div>
+      <input class="check" type="radio" id="product2" name="icecoffee" value="icecoffee">
+  </div>
+  <div>
+      <input class="check" type="radio" id="product3" name="milkshake" value="milkshake">
+  </div>
+</fieldset>
+
+
 <div class="backdrop by-my_is-hidden" by-me-data-modal>
   <div class="buy-me-modal">
-    <button type="button" class="modal__close-btn" by-me-modal-close>
-      <svg class="modal__site-icon" width="20px" height="20px">
-        <use href="./images/icons.svg#icon-close"></use>
-      </svg>
-    </button>
-    <div class="buy-me-modal__wrap">
-      <b class="buy-me__title">Buy now</b>
-      <div class="products__wrap">
-      <div class="product-card-container">
-      <div class="buy-me-img__box">
-      <img src="./images/products/mobile_tablet/icecream_mobile_tablet@1x.jpg" class="buy-me__img" alt="icecream photo">
-    </div>
-      <div class="buy-me__product-card">
-      <p class="product__discript">ice cream</p>
-    </div>
-      </div>
-      <div class="product-card-container">
-        <div class="buy-me-img__box accent-second-card">
-        <img src="./images/products/mobile_tablet/icecoffee_mobile_tablet@1x.jpg" class="buy-me__img" alt="icecream photo">
-      </div>
-        <div class="buy-me__product-card accent-second-border">
-        <p class="product__discript">ice coffee</p>
-      </div>
-        </div>
-        <div class="product-card-container">
-          <div class="buy-me-img__box accent-last-card">
-          <img src="./images/products/mobile_tablet/milkshake_mobile_tablet@1x.jpg" class="buy-me__img" alt="icecream photo">
-        </div>
-          <div class="buy-me__product-card accent-last-border">
-          <p class="product__discript">milkshake</p>
-        </div>
-          </div></div>
-          <form class="buy-me__form">
-    <input type="text" id="name" name="name" class="form__input" placeholder="Name">
-    <input type="tel" id="tel" name="tel" class="form__input" placeholder="Phone">
-    <textarea class="form__input" type="textarea" id="comment" name="comment" placeholder="Comment"></textarea>
-    <button type="submit" class="buy-me-btn">Submit</button>
+      <button type="button" class="modal__close-btn" by-me-modal-close>
+          <svg class="modal__site-icon" width="20px" height="20px">
+              <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+      </button>
+      <div class="buy-me-modal__wrap">
+          <b class="buy-me__title">Buy now</b>
+          <div class="products__wrap">
+              <form class="buy-me__form">
+                  <div class="product-card-container">
+                      <div class="buy-me-img__box">
+                          <img src="./images/products/mobile_tablet/icecream_mobile_tablet@1x.jpg"
+                              class="buy-me__img" alt="icecream photo">
+                      </div>
+                      <div class="buy-me__product-card">
+                          <p class="product__discript">ice cream</p>
+                      </div>
+                  </div>
+                  <div class="product-card-container">
+                      <div class="buy-me-img__box accent-second-card">
+                          <img src="./images/products/mobile_tablet/icecoffee_mobile_tablet@1x.jpg"
+                              class="buy-me__img" alt="icecream photo">
+                      </div>
+                      <div class="buy-me__product-card accent-second-border">
+                          <p class="product__discript">ice coffee</p>
+                      </div>
+                  </div>
+                  <div class="product-card-container">
+                      <div class="buy-me-img__box accent-last-card">
+                          <img src="./images/products/mobile_tablet/milkshake_mobile_tablet@1x.jpg"
+                              class="buy-me__img" alt="icecream photo">
+                      </div>
+                      <div class="buy-me__product-card accent-last-border">
+                          <p class="product__discript">milkshake</p>
+                      </div>
+                  </div>
+          </div>
+
+          <input type="text" id="name" name="name" class="form__input" placeholder="Name" autocomplete="off">
+          <input type="number" id="tel" name="tel" class="form__input" placeholder="Phone" autocomplete="off">
+          <textarea class="form__input" type="textarea" id="comment" name="comment"
+              placeholder="Comment"></textarea>
+          <button type="submit" class="buy-me-btn" disabled>Submit</button>
           </form>
-    </div>
+      </div>
   </div>
-  </div>
+</div>
