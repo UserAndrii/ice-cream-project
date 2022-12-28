@@ -101,6 +101,7 @@ color: #131313;
 }
 .product-card-container{
 margin-top: 20px;
+position: relative;
 }
 .buy-me__product-card{
 margin-top: 60px;
@@ -205,3 +206,33 @@ border-radius: 10px;
 border: none;
 margin: 26px auto 29px auto;
 }
+.radiobtn__one{
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+  display: inline;
+&:checked ~ .buy-me__product-card{
+  background-color: #96AF8C;
+}
+}
+
+.radiobtn__two{
+  width: 100px;
+  height: 100px;
+  opacity: 1;
+  display: inline;
+  &:checked ~ .buy-me__product-card{
+    background-color: #EFD478;
+  }
+  }
+
+  .radiobtn__three{
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+    display: inline;
+    &:checked ~ .buy-me__product-card{
+      background-color: #D5753FB2;
+    }
+  }
+  
