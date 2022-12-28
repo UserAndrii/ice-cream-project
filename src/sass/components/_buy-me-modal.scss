@@ -1,7 +1,7 @@
-:root{
+:root {
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop{
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -15,45 +15,49 @@
   transition: opacity 250ms var(--cubic);
 }
 
-.backdrop.by-my_is-hidden{
+.backdrop.by-my_is-hidden {
   opacity: 0;
   pointer-events: none;
-  & .buy-me-modal{
-transform:translate(-50%, -50%) scaleX(0.1) scaleY(0.1);
-}
+  & .buy-me-modal {
+    transform: translate(-50%, -50%) scaleX(0.1) scaleY(0.1);
+  }
 }
 
-.buy-me-modal{
+.buy-me-modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform:translate(-50%, -50%) scaleX(1) scaleY(1);
+  transform: translate(-50%, -50%) scaleX(1) scaleY(1);
   transition: transform 500ms var(--cubic);
-  
+
   overflow: hidden;
-  background-color: #FCFCFC;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: #fcfcfc;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   z-index: 999;
-  @media  screen and (max-width: 767px) {
-   height: 551px;
-   overflow-y: scroll;
-   width: 280px;
-   padding: 28px;
-  }
-  @media screen and (min-width: 768px){
-    min-width: 568px;
-   min-height: 544px;
-  }
-  
-  @media  screen and (min-width: 1200px) {
-   min-width: 628px;
-   min-height: 581px;
-    }
-  }
-  
 
-.modal__close-btn{
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+
+  @media screen and (max-width: 767px) {
+    height: 551px;
+    overflow-y: scroll;
+    width: 280px;
+    padding: 28px;
+  }
+  @media screen and (min-width: 768px) {
+    min-width: 568px;
+    min-height: 544px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 628px;
+    min-height: 581px;
+  }
+}
+
+.modal__close-btn {
   position: fixed;
   display: flex;
   align-items: center;
@@ -61,156 +65,175 @@ transform:translate(-50%, -50%) scaleX(0.1) scaleY(0.1);
 
   top: 8px;
   right: 8px;
-  
+
   min-width: 30px;
   min-height: 30px;
   fill: currentColor;
-  background-color: transparent; 
+  background-color: transparent;
   border: none;
 }
-.buy-me-modal__wrap{
+.buy-me-modal__wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.products__wrap{
+.products__wrap {
   display: flex;
-  @media  screen and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     flex-direction: column;
     align-items: center;
   }
-  
-  @media  screen and (min-width: 768px) {
+
+  @media screen and (min-width: 768px) {
     gap: 32px;
     flex-direction: row;
     align-items: center;
-    }
-  @media  screen and (min-width: 1200px) {
-  
-    }
-}
-.buy-me__title{
-text-align: center;
-color: #131313;
-@media  screen and (min-width: 768px) {
-  margin-top: 32px;
   }
-@media  screen and (min-width: 1200px) {
-
+  @media screen and (min-width: 1200px) {
   }
 }
-.product-card-container{
-margin-top: 20px;
-position: relative;
+.buy-me__title {
+  font-family: 'Seymour One';
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  color: #131313;
+  @media screen and (min-width: 768px) {
+    margin-top: 32px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  @media screen and (min-width: 1200px) {
+  }
 }
-.buy-me__product-card{
-margin-top: 60px;
+.product-card-container {
+  margin-top: 20px;
+  position: relative;
+}
+.buy-me__product-card {
+  margin-top: 60px;
 
   width: 132;
   height: 139px;
-  border: 2px solid #96AF8C;
-filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
-border-radius: 15px;
-transition: opacity 250ms var(--cubic);
-&:hover,
-  &:focus{
-  background-color: #96AF8C;
+  border: 2px solid #96af8c;
+  filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+  border-radius: 15px;
+  transition: opacity 250ms var(--cubic);
+  &:hover,
+  &:focus {
+    background-color: #96af8c;
+  }
 }
+.accent-second-border {
+  border: 2px solid #efd478;
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+  border-radius: 15px;
+  &:hover,
+  &:focus {
+    background-color: #efd478;
+  }
 }
-.accent-second-border{
-  border: 2px solid #EFD478;
-box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
-border-radius: 15px;
-&:hover,
-  &:focus{
-  background-color: #EFD478;
-}
-}
-.accent-last-border{
-  border: 2px solid #D6936D;
+.accent-last-border {
+  border: 2px solid #d6936d;
   filter: drop-shadow(0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
   border-radius: 15px;
   &:hover,
-  &:focus{
-    background-color: #D6936D;
+  &:focus {
+    background-color: #d6936d;
   }
 }
-.buy-me-img__box{
+.buy-me-img__box {
   display: flex;
   align-items: center;
-position: absolute;
-margin-top: 15px;
-width: 130px;
-height: 130px;
-background: linear-gradient(0deg, rgba(156, 190, 143, 0.7), rgba(156, 190, 143, 0.7)), #D9D9D9;
-box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
-border-radius: 50%;
+  position: absolute;
+  margin-top: 15px;
+  width: 130px;
+  height: 130px;
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  border-radius: 50%;
 }
-.accent-second-card{
-  background: linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7)), #D9D9D9;
-box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+.accent-second-card {
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
 }
 
-.accent-last-card{
-  background: linear-gradient(0deg, rgba(213, 117, 63, 0.7), rgba(213, 117, 63, 0.7)), #D9D9D9;
-box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+.accent-last-card {
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
 }
-.buy-me__img{
+.buy-me__img {
   position: absolute;
   background-color: transparent;
   bottom: 7px;
   width: 132px;
-z-index: 99;
-border-radius: 98px;
+  z-index: 99;
+  border-radius: 98px;
 }
 
-.product__discript{
+.product__discript {
   font-weight: 700;
-font-size: 16px;
-line-height: calc(20/16);
-margin-top: 90px;
-/* identical to box height */
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  margin-top: 90px;
+  /* identical to box height */
 
-text-align: center;
-letter-spacing: 0.04em;
-text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 
-color: #131313;
+  color: #131313;
 }
 
-.buy-me__form{
+.buy-me__form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media  screen and (min-width: 768px) {
-  flex-direction: row;
-  gap:32px;
-  margin-bottom: 31px;
-    }
+  margin-bottom: 20px;
 
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: 31px;
+  }
 }
 
-.form__input{
+.form__input {
   background: rgba(248, 210, 78, 0.1);
-border: 1px solid #84A178;
-border-radius: 10px;
-width: 224px;
-margin-top: 12px;
-padding: 8px 12px;
-resize: none;
-&:first-child{
-  margin-top: 31px;
-}
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  width: 224px;
+  margin-top: 12px;
+  padding: 8px 12px;
+  resize: none;
+  &:first-child {
+    margin-top: 31px;
+  }
 }
 
-.buy-me-btn{
+.buy-me-btn {
   color: #131313;
   padding: 12px 34px;
   cursor: pointer;
-  background: #F8D24E;
-border-radius: 10px;
-border: none;
-margin: 26px auto 29px auto;
+  background: #f8d24e;
+  border-radius: 10px;
+  border: none;
+  margin: 26px auto 29px auto;
 }
 
 #radioset {
@@ -219,22 +242,21 @@ margin: 26px auto 29px auto;
   opacity: 0;
 }
 
-
-.buy-me__product-card.active{
-  background-color: #AEC6A5;
+.buy-me__product-card.active {
+  background-color: #aec6a5;
 }
-.buy-me__product-card.accent-second-border.active{
-background-color: #EFD478;
-}
-
-.buy-me__product-card.accent-last-border.active{
-  background-color: #D6936D;
+.buy-me__product-card.accent-second-border.active {
+  background-color: #efd478;
 }
 
-.buy-me-btn:disabled{
-background-color: #ABABAB;
-color: #000000;
+.buy-me__product-card.accent-last-border.active {
+  background-color: #d6936d;
 }
-.form__input.empty{
+
+.buy-me-btn:disabled {
+  background-color: #ababab;
+  color: #000000;
+}
+.form__input.empty {
   border-color: red;
 }
