@@ -52,6 +52,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
 
   top: 12px;
   right: 12px;
@@ -273,7 +274,7 @@
   &:focus + .products-form__label,
   &:not(:placeholder-shown) + .products-form__label {
     background-color: getColor('hover-second');
-    transform: translate(0px, -27px) scale(0.7);
+    transform: translate(0px, -32px) scale(0.7);
   }
 }
 
@@ -322,7 +323,7 @@
   &:focus + .products-form__label-textarea,
   &:not(:placeholder-shown) + .products-form__label-textarea {
     background-color: getColor('hover-second');
-    transform: translate(0px, -27px) scale(0.7);
+    transform: translate(0px, -32px) scale(0.7);
   }
 }
 
