@@ -1,14 +1,16 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('[by-me-mobile-open]'),
+    openModalBtn: document.querySelector('.by-me-mobile-open'),
     closeModalBtn: document.querySelector('[by-me-mobile-close]'),
     modal: document.querySelector('[by-me-mobile-modal]'),
   };
 
   $('body').on('touchstart', function(ev) {
     var target = $(ev.target);
-    if(target.is('.backdrop') && $('body').hasClass('hystmodal__opened') && $('body').hasClass('modal-open')) {
+
+    if(target.is('.backdrop') && $('body').hasClass('modal-open')) {
        toggleModal();
+        console.log(target, 'mob')
     }
   });
 
