@@ -1,20 +1,22 @@
 (() => {
   const refs = {
-    openModalBtn: document.querySelector('.by-me-modal-open'),
-    closeModalBtn: document.querySelector('[by-me-modal-close]'),
-    modal: document.querySelector('[by-me-data-modal]')
+    openModalBtn: document.querySelector('.by-me-mobile-open'),
+    closeModalBtn: document.querySelector('[by-me-mobile-close]'),
+    modal: document.querySelector('[by-me-mobile-modal]'),
   };
 
-  $('body').on('mousedown ', function(ev) {
+  $('body').on('touchstart', function(ev) {
     var target = $(ev.target);
 
-    if(target.is('.backdrop') && $('body').hasClass('modal-open') && !$('body').hasClass('hystmodal__opened')) {
+    if(target.is('.backdrop') && $('body').hasClass('modal-open')) {
        toggleModal();
+        console.log(target, 'mob')
     }
   });
 
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
+
 
 
   function toggleModal() {

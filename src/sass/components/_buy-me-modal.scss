@@ -15,7 +15,7 @@
   transition: opacity 250ms var(--cubic);
 }
 
-.backdrop_is-hidden{
+.backdrop.by-my_is-hidden{
   opacity: 0;
   pointer-events: none;
   & .buy-me-modal{
@@ -30,9 +30,11 @@ transform:translate(-50%, -50%) scaleX(0.1) scaleY(0.1);
   transform:translate(-50%, -50%) scaleX(1) scaleY(1);
   transition: transform 500ms var(--cubic);
   
+  overflow: hidden;
   background-color: #FCFCFC;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  z-index: 999;
   @media  screen and (max-width: 767px) {
    height: 551px;
    overflow-y: scroll;
@@ -99,6 +101,7 @@ color: #131313;
 }
 .product-card-container{
 margin-top: 20px;
+position: relative;
 }
 .buy-me__product-card{
 margin-top: 60px;
@@ -179,6 +182,12 @@ color: #131313;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media  screen and (min-width: 768px) {
+  flex-direction: row;
+  gap:32px;
+  margin-bottom: 31px;
+    }
+
 }
 
 .form__input{
@@ -202,4 +211,30 @@ resize: none;
 border-radius: 10px;
 border: none;
 margin: 26px auto 29px auto;
+}
+
+#radioset {
+  position: absolute;
+  z-index: -6;
+  opacity: 0;
+}
+
+
+.buy-me__product-card.active{
+  background-color: #AEC6A5;
+}
+.buy-me__product-card.accent-second-border.active{
+background-color: #EFD478;
+}
+
+.buy-me__product-card.accent-last-border.active{
+  background-color: #D6936D;
+}
+
+.buy-me-btn:disabled{
+background-color: #ABABAB;
+color: #000000;
+}
+.form__input.empty{
+  border-color: red;
 }
