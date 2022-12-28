@@ -1,0 +1,119 @@
+<div class="products-backdrop products-backdrop__is-hidden" products-data-modal>
+  <div class="products-modal">
+    <button type="button" class="products-modal__btn" products-modal-close>
+      <svg class="products-modal__icon" width="20" height="20">
+        <use href="./images/icons.svg#icon-close-modal"></use>
+      </svg>
+    </button>
+
+    <h2 class="products-modal__title">Chololate icecream</h2>
+    <div class="products-box">
+      <img
+        class="products-box__picture"
+        src="./images/products/modal/choco_icecream_modal@1x.jpg"
+        srcset="
+          ./images/products/modal/choco_icecream_modal@1x.jpg 1x,
+          ./images/products/modal/choco_icecream_modal@2x.jpg 2x
+        "
+        alt="icecream"
+        width="132px"
+        height="132px"
+      />
+    </div>
+    <ul class="macroelements">
+      <li class="macroelements__item">
+        <div class="macroelements__position">
+          <p class="macroelements__grams">320</p>
+          <p class="macroelements__name">kcal</p>
+        </div>
+      </li>
+      <li class="macroelements__item">
+        <div class="macroelements__position">
+          <p class="macroelements__grams">4g</p>
+          <p class="macroelements__name">Protein</p>
+        </div>
+      </li>
+      <li class="macroelements__item">
+        <div class="macroelements__position">
+          <p class="macroelements__grams">8,2g</p>
+          <p class="macroelements__name">Fats</p>
+        </div>
+      </li>
+      <li class="macroelements__item">
+        <div class="macroelements__position">
+          <p class="macroelements__grams">40,4g</p>
+          <p class="macroelements__name">Carbs</p>
+        </div>
+      </li>
+    </ul>
+    <h3 class="products-modal__pre-title">Ingredients</h3>
+    <ul class="ingredients">
+      <li class="ingredients__item">
+        <p class="ingredients__food">Milk</p>
+        <p class="ingredients__gram">100ml</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__food">Belgian chocolate</p>
+        <p class="ingredients__gram">20g</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__food">Cream</p>
+        <p class="ingredients__gram">150ml</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__food">Cocoa powder</p>
+        <p class="ingredients__gram">30g</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__food">Sugar</p>
+        <p class="ingredients__gram">40g</p>
+      </li>
+      <li class="ingredients__item">
+        <p class="ingredients__food">Vanilla sugar</p>
+        <p class="ingredients__gram">10g</p>
+      </li>
+    </ul>
+    <form class="products-form" autocomplete="off">
+      <div class="products-form__wrapper">
+        <input
+          class="products-form__input"
+          type="text"
+          name="name"
+          id="name"
+          required
+          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+          title="Username must be two words separated by space."
+          placeholder="&#32;"
+        />
+        <label class="products-form__label" for="name">Name </label>
+      </div>
+
+      <div class="products-form__wrapper">
+        <input
+          class="products-form__input"
+          type="tel"
+          name="tel"
+          id="tel"
+          required
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          title="Format: 123-456-7890"
+          placeholder="&#32;"
+        />
+        <label class="products-form__label" for="tel">Phone</label>
+      </div>
+      <div class="products-form__wrapper">
+        <textarea
+          class="products-form__textarea"
+          name="comment"
+          id="comment"
+          pattern="[A-Za-z]{3}"
+          placeholder="&#32;"
+        ></textarea>
+        <label class="products-form__label-textarea" for="comment"
+          >Comment
+        </label>
+      </div>
+    </form>
+    <button type="submit" class="products-form__button">Submit</button>
+  </div>
+</div>
