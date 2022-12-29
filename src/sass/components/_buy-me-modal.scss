@@ -62,6 +62,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
   top: 8px;
   right: 8px;
@@ -71,6 +72,12 @@
   fill: currentColor;
   background-color: transparent;
   border: none;
+  transition: fill $transition-timing $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: getColor('hover-second');
+  }
 }
 .buy-me-modal__wrap {
   display: flex;

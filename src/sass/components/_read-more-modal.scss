@@ -56,6 +56,12 @@
 
 .read-more-modal__icon {
   fill: getColor('black-text');
+  transition: fill $transition-timing $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: getColor('hover-second');
+  }
 
   @media screen and (min-width: 767px) {
     width: 24px;
