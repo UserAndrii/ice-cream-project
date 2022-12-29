@@ -27,7 +27,7 @@
 // ВІКНО МОДАЛКИ
 .products-modal {
   position: absolute;
-  top: 70%;
+  top: 75%;
   left: 50%;
   z-index: 20;
 
@@ -63,6 +63,13 @@
   fill: currentColor;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+  transition: fill $transition-timing $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: getColor('hover-second');
+  }
 }
 // ЗАГОЛОВОК МОДАЛКИ
 .products-modal__title {

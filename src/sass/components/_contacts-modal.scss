@@ -198,12 +198,13 @@
 
   // TABLET-DESKTOP-STYLE
   @media screen and (min-width: 480px) {
-    top: 50%;
+    top: 60%;
     left: 50%;
     width: 280px;
   }
 
   @media screen and (min-width: 768px) {
+    top: 65%;
     padding: 32px 60px;
     width: 568px;
   }
