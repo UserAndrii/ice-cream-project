@@ -26,7 +26,6 @@ body {
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: getColor('hover-accent');
-    outline: 1px solid getColor('hover-second');
   }
 }
 
