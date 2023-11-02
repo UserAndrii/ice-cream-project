@@ -1,3 +1,9 @@
+@media screen and (min-width: 480px) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 body {
   background-color: getColor('bg-primary');
   color: getColor('white-text');
